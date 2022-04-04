@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height:500px;
+            width:1000px;
+            margin-left:auto;
+            margin-right:auto;
+            display:block;
+        }
+        .box1{
+            height:500px;
+            width:1000px;
+            margin-left:auto;
+            margin-right:auto;
+            display:none;
+        }
+        .box2{
+            height:500px;
+            width:1000px;
+            margin-left:auto;
+            margin-right:auto;
+            display:none;
+        }
+        .text{
+            height:300px;
+            width:600px;
+        }
+        .var{
+            height:400px;
+            width:700px;
+        }
+        .text1{
+            height:100px;
+            width:600px;
+        }
+        .win{
+            background-image:url(https://ds04.infourok.ru/uploads/ex/0a0f/0003da9e-6bcb01f3/img11.jpg);
+            background-size:100% 100%;
+            height:1000px;
+        }
+    </style>
+</head>
+<body>
+    <div class = "box">
+        <div class = "text">
+            <h1 style="position:absolute"> 1 вопрос: Кто изображен на картинке?</h1>
+            <image src = "https://warspot-asset.s3.amazonaws.com/articles/pictures/000/022/368/content/portret_vasko_da_gamy_kisti_georgiu_lopesha-fb96d819d77b9600a846ca18c2901503.jpg" style = "height:200px;width:200px;margin-top:100px"></image>
+        </div>
+        <div class = "var">
+            <div class = "nope">
+                <h1>1. Фернан Магеллан</h1>
+            </div>
+            <div class = "nope">
+                <h1>2. Дэвид Ричардсон</h1>
+            </div>
+            <div class = "yes">
+                <h1>3. Васко да Гама</h1>
+            </div>
+            <div class = "nope">
+                <h1>4. Карл Коллинс</h1>
+            </div>
+        </div>
+    </div>
+    <div class = "box1">
+        <div class = "text1">
+            <h1 style="position:absolute">2 вопрос: Кто открыл явление самоиндукции?</h1>
+        </div>
+        <div class = "var">
+            <div class = "nope">
+                <h1>1. Карл Эрстед</h1>
+            </div>
+            <div class = "yes">
+                <h1>2. Майкл Фарадэй</h1>
+            </div>
+            <div class = "nope">
+                <h1>3. Альберт Эйнштейн</h1>
+            </div>
+            <div class = "nope">
+                <h1>4. Никола Тесла</h1>
+            </div>
+        </div>
+    </div>
+     <div class = "box2">
+        <div class = "text1">
+            <h1 style="position:absolute">3 вопрос: Кто был учителем царской семьи при Николае II</h1>
+        </div>
+        <div class = "var">
+            <div class = "yes">
+                <h1>1. Пьер Жильяр</h1>
+            </div>
+            <div class = "nope">
+                <h1>2. Карл Маннергейм</h1>
+            </div>
+            <div class = "nope">
+                <h1>3. Франц Батист</h1>
+            </div>
+            <div class = "nope">
+                <h1>4. Бильбек Анишек</h1>
+            </div>
+        </div>
+    </div>
+    <div class = "win" style = "display:none">
+    </div>
+<script>
+        let yes = document.querySelectorAll(".yes")
+        let nope = document.querySelectorAll(".nope")
+        yes[0].onclick = function(){
+            alert("Правильно!")
+            document.querySelector(".box").style.display = "none"
+            document.querySelector(".box1").style.display = "block"
+        }
+        yes[1].onclick = function(){
+            alert("Правильно!")
+            document.querySelector(".box1").style.display = "none"
+            document.querySelector(".box2").style.display = "block"
+        }
+        yes[2].onclick = function(){
+            alert("Правильно!")
+            document.querySelector(".box2").style.display = "none"
+            document.querySelector(".win").style.display = "block"
+        }
+        for (let i = 0;i < 9; i = i +1){
+                nope[i].onclick = function(){
+                    alert("Неправильно, попробуй ещё раз")
+                }
+            }
+</script>
+</body>
+</html>
